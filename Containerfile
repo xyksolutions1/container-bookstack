@@ -4,16 +4,16 @@
 
 ARG BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-nginx-php-fpm:main
 
 LABEL \
         org.opencontainers.image.title="BookStack" \
         org.opencontainers.image.description="Containerized knowledge information tool with included webserver and PHP interpreter" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/bookstack" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-bookstack/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-bookstack.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/bookstack" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-bookstack/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-bookstack.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -26,8 +26,8 @@ COPY README.md /usr/src/container/README.md
 
 ENV \
     NGINX_WEBROOT=/www/bookstack \
-    IMAGE_NAME="nfrastack/bookstack" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-bookstack/"
+    IMAGE_NAME="xyksolutions1/bookstack" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-bookstack/"
 
 RUN echo "" && \
     BUILD_ENV=" \
